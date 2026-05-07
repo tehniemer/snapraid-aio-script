@@ -1429,7 +1429,7 @@ check_snapraid_status() {
         
     # Check for the "NOT fully synced" warning message
   elif echo "$snapraid_status_output" | grep -q "WARNING! The array is NOT fully synced."; then
-    if [ "$SYNC_ERROR_BYPASS" -eq 1]; then
+    if [ "$SYNC_ERROR_BYPASS" -eq 1 ]; then
       mklog "WARN: Previous sync did not complete successfully, proceeding anyway."
       SNAPRAID_STATUS=0
     else  
